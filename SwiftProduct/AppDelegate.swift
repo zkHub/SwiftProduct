@@ -17,9 +17,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.setApplicationTheme()
+//        print(Bundle.main.infoDictionary)
+//        "CFBundleShortVersionString": 1.0,
+//        "CFBundleVersion": 1,
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let testVc:TestViewController = TestViewController.init()
+        let baseNaviVc:BaseNavigationController = BaseNavigationController.init(rootViewController: testVc)
+        window?.rootViewController = baseNaviVc
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
+    func setApplicationTheme() {
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.tintColor = UIColor.cyan
+        navigationBar.barTintColor = UIColor.blue
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15)]
+//        去掉下面1px的线
+        navigationBar.backgroundImage(for: .default)
+        navigationBar.shadowImage = UIImage.init()
+        
+//        适配iOS11中scrollView位置的调整
+        if #available(iOS 11.0, *) {
+            let scrollView = UIScrollView.appearance()
+            scrollView.contentInsetAdjustmentBehavior = .never
+        }
+        
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

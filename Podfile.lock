@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (4.5.1)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15)
+  - OpenUDID (1.0.0)
+  - Reachability (3.2)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - FMDB
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - OpenUDID
+  - Reachability
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
+
+PODFILE CHECKSUM: a19f0e9277abff449fa61720a20713d585220b66
+
+COCOAPODS: 1.3.1
