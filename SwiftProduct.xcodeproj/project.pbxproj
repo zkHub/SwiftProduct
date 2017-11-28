@@ -16,6 +16,7 @@
 		0A94FF471FCBE5BA009E1FD4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94FF461FCBE5BA009E1FD4 /* TestViewController.swift */; };
 		0A94FF491FCBE5E0009E1FD4 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94FF481FCBE5E0009E1FD4 /* BaseNavigationController.swift */; };
 		0A94FF4D1FCC1478009E1FD4 /* xfb_refresh.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0A94FF4C1FCC1478009E1FD4 /* xfb_refresh.gif */; };
+		0A94FF4F1FCD63AC009E1FD4 /* BaseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94FF4E1FCD63AC009E1FD4 /* BaseTools.swift */; };
 		324BF2D3216185B10DC2AFB9 /* Pods_SwiftProductUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DD9F31405D4C63FBFABCBD /* Pods_SwiftProductUITests.framework */; };
 		81EC55A2A6F8634DEB452D87 /* Pods_SwiftProductTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC194EEFB3693D9883A036F6 /* Pods_SwiftProductTests.framework */; };
 		DE317629AE8F396DB8CAE8C7 /* Pods_SwiftProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C619BEB71A1CF0BCD1F27F9E /* Pods_SwiftProduct.framework */; };
@@ -55,6 +56,7 @@
 		0A94FF461FCBE5BA009E1FD4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		0A94FF481FCBE5E0009E1FD4 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0A94FF4C1FCC1478009E1FD4 /* xfb_refresh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = xfb_refresh.gif; sourceTree = "<group>"; };
+		0A94FF4E1FCD63AC009E1FD4 /* BaseTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTools.swift; sourceTree = "<group>"; };
 		124597F4DA078E6AF7484DD9 /* Pods-SwiftProductUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProductUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProductUITests/Pods-SwiftProductUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC7D02CEB70DA0B7636B776 /* Pods-SwiftProductTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProductTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProductTests/Pods-SwiftProductTests.release.xcconfig"; sourceTree = "<group>"; };
 		7514CE53E26FF0109BFB26D7 /* Pods-SwiftProductTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProductTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProductTests/Pods-SwiftProductTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		0A94FF4A1FCBE663009E1FD4 /* BaesTools */ = {
 			isa = PBXGroup;
 			children = (
+				0A94FF4E1FCD63AC009E1FD4 /* BaseTools.swift */,
 				0A94FF441FCBE573009E1FD4 /* BaseViewController.swift */,
 				0A94FF481FCBE5E0009E1FD4 /* BaseNavigationController.swift */,
 			);
@@ -493,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A94FF4F1FCD63AC009E1FD4 /* BaseTools.swift in Sources */,
 				0A94FF471FCBE5BA009E1FD4 /* TestViewController.swift in Sources */,
 				0A94FF491FCBE5E0009E1FD4 /* BaseNavigationController.swift in Sources */,
 				0A94FF451FCBE573009E1FD4 /* BaseViewController.swift in Sources */,
