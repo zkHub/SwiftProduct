@@ -14,6 +14,8 @@ let cellIdentifier = "cellIdentifier"
 
 class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDataSource {
 
+    var tableView: UITableView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,19 +29,29 @@ class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         
 //        Alamofire.request(url!)
         
-        let tableView:UITableView = UITableView.init(frame: .init(x: 0, y: 0, width: 320, height: 568), style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.view.addSubview(tableView)
+
         
-        tableView.mj_header = BaseTools.createMjHeader()
+        tableView = UITableView.init(frame: .init(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height), style: .plain)
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        self.view.addSubview(tableView!)
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+//        tableView.mj_header = BaseTools.createMjHeader()
+        
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        if #available(iOS 11.0, *) {
+            tableView?.contentInsetAdjustmentBehavior = .never
+            
+            
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
     }
 
     //MARK - tableView delegate datasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +60,13 @@ class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    
+    override func viewSafeAreaInsetsDidChange() {
+        if #available(iOS 11.0, *) {
+            print(self.view.safeAreaInsets)
+            tableView?.frame = CGRect(x: 0, y: self.view.safeAreaInsets.top, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {
