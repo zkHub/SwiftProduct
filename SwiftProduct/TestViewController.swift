@@ -29,7 +29,7 @@ class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         
 //        Alamofire.request(url!)
         
-
+        self.title = "swift"
         
         tableView = UITableView.init(frame: .init(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height), style: .plain)
         tableView?.delegate = self
@@ -49,6 +49,15 @@ class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         }
     }
 
+    override func viewSafeAreaInsetsDidChange() {
+        if #available(iOS 11.0, *) {
+            print(self.view.safeAreaInsets)
+            tableView?.frame = CGRect(x: 0, y: self.view.safeAreaInsets.top, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+            
+        }
+    }
+    
+    
     //MARK - tableView delegate datasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
@@ -60,12 +69,10 @@ class TestViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    override func viewSafeAreaInsetsDidChange() {
-        if #available(iOS 11.0, *) {
-            print(self.view.safeAreaInsets)
-            tableView?.frame = CGRect(x: 0, y: self.view.safeAreaInsets.top, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
-
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pushVC: PushViewController  = PushViewController()
+//        pushVC.num = "\(indexPath.row)"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
     
